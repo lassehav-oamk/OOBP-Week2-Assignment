@@ -110,3 +110,56 @@ describe("lion and snake tests", () => {
     expect(snake.makeSound()).toEqual("I am a Snake and I sound like hiss");
   });
 });
+
+// === City Functions Tests ===
+// Tests for city-related functions, including getting city names, uppercase names, and the city with the lowest population
+import { City, cities, getCityNames, getCityNamesInUpperCase, getCityWithLowestPopulation } from './week2';
+
+describe('City Functions', () => {
+  test('should return an array of city names', () => {
+    const result = getCityNames(cities);
+    expect(result).toEqual(['London', 'Berlin', 'New York']);
+  });
+
+  test('should return city names in uppercase', () => {
+    const result = getCityNamesInUpperCase(cities);
+    expect(result).toEqual(['LONDON', 'BERLIN', 'NEW YORK']);
+  });
+
+  test('should return the city with the lowest population', () => {
+    const result = getCityWithLowestPopulation(cities);
+    expect(result.name).toBe('Berlin');
+  });
+});
+
+// === BankAccount Tests ===
+// Tests for the BankAccount class, verifying balance operations and log functionality
+import { BankAccount } from './week2';
+
+describe('BankAccount', () => {
+  let account: BankAccount;
+
+  // Setup before each test: Initialize a new BankAccount instance
+  beforeEach(() => {
+    account = new BankAccount('John Doe', '12345');
+  });
+
+  test('should log increaseBalance with timestamp', () => {
+    account.increaseBalance(100);
+    const logEntry = account.log[0];
+    const timestampRegex = /\d{2}\/\d{2}\/\d{4}, \d{2}:\d{2}:\d{2} : \+100/;
+    expect(logEntry).toMatch(timestampRegex);
+    expect(account.getBalance()).toBe(100);
+  });
+
+  test('should log decreaseBalance with timestamp', () => {
+    account.increaseBalance(200); // Add some balance first
+    account.decreaseBalance(50);
+    const logEntry = account.log[1];
+    const timestampRegex = /\d{2}\/\d{2}\/\d{4}, \d{2}:\d{2}:\d{2} : -50/;
+    expect(logEntry).toMatch(timestampRegex);
+    expect(account.getBalance()).toBe(150);
+  });
+
+
+});
