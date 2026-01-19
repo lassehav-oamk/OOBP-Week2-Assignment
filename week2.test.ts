@@ -81,11 +81,11 @@ describe("lion and snake tests", () => {
     expect(lion.sound).toBeDefined();
     expect(snake.sound).toBeDefined();
   });
-  it("should have a name property with value Lion", () => {
-    expect(lion.name).toEqual("Lion");
+  it("should have a name property with value lion", () => {
+    expect(lion.name).toEqual("lion");
   });
-  it("should have a name property with value Snake", () => {
-    expect(snake.name).toEqual("Snake");
+  it("should have a name property with value snake", () => {
+    expect(snake.name).toEqual("snake");
   });
   it("should have an age property with value 8", () => {
     expect(lion.age).toEqual(8);
@@ -103,10 +103,10 @@ describe("lion and snake tests", () => {
     expect(lion.makeSound).toBeDefined();
     expect(snake.makeSound).toBeDefined();
   });
-  it("should return a string: I am a Lion and I sound like roar", () => {
-    expect(lion.makeSound()).toEqual("I am a Lion and I sound like roar");
+  it("should return a string: I am a lion and I sound like roar", () => {
+    expect(lion.makeSound()).toEqual("I am a lion and I sound like roar");
   });
-  it("should return a string: I am a Snake and I sound like hiss", () => {
-    expect(snake.makeSound()).toEqual("I am a Snake and I sound like hiss");
+  it("should return a string: I am a snake and I sound like hiss", () => {
+    expect(snake.makeSound()).toEqual("I am a snake and I sound like hiss");
   });
 });

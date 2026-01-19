@@ -9,6 +9,9 @@ Task 1 - Greeter function
 Create a function with the name GreeterFunction that takes a string as a parameter and returns a string that says "Hello, " + the parameter.
 */
 /* Write your Task 1 solution here */
+function GreeterFunction() {
+  
+}
 
 /* 
 Task 2 - Define a city object and use an interface to define the object structure.
@@ -46,12 +49,12 @@ let animal2 = null; // initialize the animal2
   in a class named Animal2. 
 
   The method should return a string in the following format "I am a <name> and I sound like <sound>".
-  Where <name> is the name of the animal and <sound> is the sound the animal makes.
+  Where <name> is the name of the animal in lowercase and <sound> is the sound the animal makes.
   The sound should be defined when the animal object is created.
 
   Use your Animal2 class to create two animal objects. You should create:
-  - snake, which makes a sound "hiss", age is 4
-  - lion, which makes a sound "roar", age is 8
+  - Snake, which makes a sound "hiss", age is 4
+  - Lion, which makes a sound "roar", age is 8
 
   The animal objects should be assigned to snake and lion variables respectively.
 */
